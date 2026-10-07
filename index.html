@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolaraTech | Turnkey Solar EPC & Module/BOS Sourcing</title>
-    <!-- Tailwind CSS CDN -->
+    <title>PUERGY Power | Powering A Sustainable Future - Solar Solutions Nagpur</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        brand: {
-                            dark: '#0B132B',
-                            slate: '#1C2541',
-                            card: '#162032',
-                            gold: '#E0A96D',
-                            goldHover: '#cca030',
-                            amber: '#FFB703',
-                            green: '#10B981',
-                            cyan: '#06B6D4'
-                        }
-                    },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif']
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBlue: '#005baa',
+                        brandGreen: '#1db954',
+                        brandGold: '#f59e0b',
+                        brandDark: '#0b1329',
+                        brandSurface: '#131e3a',
                     }
                 }
             }
@@ -35,910 +32,752 @@
     </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0B132B;
-            color: #E2E8F0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b1329;
+            color: #f3f4f6;
         }
-        .glow-effect {
-            box-shadow: 0 0 25px -5px rgba(255, 183, 3, 0.25);
+        .glass-panel {
+            background: rgba(19, 30, 58, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .glow-card:hover {
-            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.3);
-            border-color: rgba(16, 185, 129, 0.5);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
         }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .glass-card:hover {
+            border-color: rgba(29, 185, 84, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -10px rgba(0, 91, 170, 0.3);
         }
-        ::-webkit-scrollbar-track {
-            background: #0B132B;
+        .gradient-text {
+            background: linear-gradient(135deg, #005baa 0%, #1db954 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #1C2541;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FFB703;
+        .gradient-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-brand-dark text-slate-100 antialiased min-h-screen flex flex-col justify-between">
+<body class="antialiased overflow-x-hidden selection:bg-emerald-500 selection:text-white">
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-amber to-amber-600 flex items-center justify-center text-brand-dark shadow-lg font-black text-xl group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-solar-panel"></i>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1">
-                        SOLARA<span class="text-brand-amber">TECH</span>
-                    </span>
-                    <span class="text-[10px] tracking-widest uppercase text-slate-400 font-semibold">EPC &amp; BOS Sourcing</span>
-                </div>
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#home" class="hover:text-brand-amber transition-colors">Home</a>
-                <a href="#services" class="hover:text-brand-amber transition-colors">Services</a>
-                <a href="#calculator" class="hover:text-brand-amber transition-colors">Solar ROI Calculator</a>
-                <a href="#catalog" class="hover:text-brand-amber transition-colors">BOS Catalog</a>
-                <a href="#about" class="hover:text-brand-amber transition-colors">Why Us</a>
-                <a href="#contact" class="hover:text-brand-amber transition-colors">Contact Us</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <div class="hidden sm:flex items-center space-x-4">
-                <a href="#contact" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-brand-amber to-amber-500 text-brand-dark font-bold hover:shadow-lg hover:shadow-amber-500/20 hover:scale-105 transition-all text-sm">
-                    Get Free Quote <i class="fa-solid fa-arrow-right ml-1"></i>
-                </a>
+    <!-- TOP UTILITY BAR -->
+    <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5"><i class="fa-solid font-bold fa-location-dot text-emerald-400"></i> Nagpur, Maharashtra</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-check text-blue-400"></i> Contact Person: Shreya Agarwal</span>
             </div>
+            <div class="flex items-center space-x-6">
+                <a href="mailto:puergypower@gmail.com" class="hover:text-emerald-400 transition flex items-center gap-1.5"><i class="fa-regular fa-envelope"></i> puergypower@gmail.com</a>
+                <a href="tel:+917757842217" class="hover:text-emerald-400 transition flex items-center gap-1.5 font-semibold text-emerald-400"><i class="fa-solid fa-phone"></i> +91 7757842217</a>
+            </div>
+        </div>
+    </div>
 
-            <!-- Mobile menu button -->
-            <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO AREA -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="logo-container bg-white p-1.5 rounded-xl shadow-lg border border-slate-200/20 max-w-[180px] sm:max-w-[220px]">
+                        <!-- VECTOR RECREATION OF PU ENERGY LOGO -->
+                        <svg viewBox="0 0 500 200" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background fill for clarity -->
+                            <rect width="500" height="200" fill="#ffffff" rx="10"/>
+                            <!-- Sun Rays -->
+                            <g fill="#f59e0b">
+                                <polygon points="340,30 350,10 360,30"/>
+                                <polygon points="370,40 390,25 380,50"/>
+                                <polygon points="390,65 415,60 395,80"/>
+                                <polygon points="395,95 420,100 395,110"/>
+                                <polygon points="310,35 315,12 330,32"/>
+                                <polygon points="280,50 280,25 298,48"/>
+                            </g>
+                            <!-- Yellow/Orange Sun Core -->
+                            <circle cx="330" cy="80" r="45" fill="url(#sunGrad)"/>
+                            <!-- P Letter (Blue) -->
+                            <path d="M150,30 L220,30 C250,30 260,50 260,70 C260,95 240,110 210,110 L190,110 L190,150 L150,150 Z M190,60 L190,80 L210,80 C220,80 225,75 225,70 C225,65 220,60 210,60 Z" fill="url(#blueGrad)"/>
+                            <!-- U Letter (Green) -->
+                            <path d="M225,50 L260,50 L260,110 C260,135 280,150 305,150 C330,150 350,135 350,110 L350,50 L385,50 L385,110 C385,155 350,180 305,180 C260,180 225,155 225,110 Z" fill="url(#greenGrad)"/>
+                            <!-- Dynamic Leaf Swoosh -->
+                            <path d="M120,155 C190,110 280,50 365,60 C320,75 250,130 180,150 Z" fill="#22c55e"/>
+                            <path d="M280,85 C310,70 340,62 365,60 C330,85 290,105 280,85 Z" fill="#15803d"/>
+                            <!-- Text: PU ENERGY -->
+                            <text x="80" y="145" font-family="'Arial Black', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="44" fill="#005baa">PU</text>
+                            <text x="175" y="145" font-family="'Arial Black', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="44" fill="#15803d">ENERGY</text>
+                            <!-- Text: Tagline -->
+                            <text x="82" y="172" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="16" fill="#334155" letter-spacing="2.2">POWERING A SUSTAINABLE FUTURE</text>
+                            <!-- Gradients -->
+                            <defs>
+                                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0284c7"/>
+                                    <stop offset="100%" stop-color="#003b73"/>
+                                </linearGradient>
+                                <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#22c55e"/>
+                                    <stop offset="100%" stop-color="#14532d"/>
+                                </linearGradient>
+                                <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fde047"/>
+                                    <stop offset="100%" stop-color="#f59e0b"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#hero" class="hover:text-emerald-400 transition">Home</a>
+                    <a href="#calculator" class="hover:text-emerald-400 transition">Solar Calculator</a>
+                    <a href="#services" class="hover:text-emerald-400 transition">Services</a>
+                    <a href="#about" class="hover:text-emerald-400 transition">About Us</a>
+                    <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+                </nav>
+
+                <!-- QUICK ACTIONS -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="https://wa.me/917757842217?text=Hello%20Shreya%20Agarwal,%20I%20am%20interested%20in%20PUERGY%20Power%20Solar%20Solutions." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-semibold text-sm transition flex items-center gap-2 shadow-lg shadow-emerald-900/30">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Instant WhatsApp
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden bg-brand-slate border-b border-slate-700 px-4 pt-2 pb-6 space-y-3">
-            <a href="#home" class="block text-slate-200 hover:text-brand-amber py-2">Home</a>
-            <a href="#services" class="block text-slate-200 hover:text-brand-amber py-2">Services</a>
-            <a href="#calculator" class="block text-slate-200 hover:text-brand-amber py-2">Solar ROI Calculator</a>
-            <a href="#catalog" class="block text-slate-200 hover:text-brand-amber py-2">BOS Catalog</a>
-            <a href="#about" class="block text-slate-200 hover:text-brand-amber py-2">Why Us</a>
-            <a href="#contact" class="block text-slate-200 hover:text-brand-amber py-2">Contact Us</a>
-            <a href="#contact" class="block text-center px-4 py-2.5 rounded-lg bg-brand-amber text-brand-dark font-bold mt-2">Get Free Quote</a>
+        <!-- MOBILE NAV MENU -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-slate-200 hover:text-emerald-400">Home</a>
+            <a href="#calculator" class="block py-2 text-slate-200 hover:text-emerald-400">Solar ROI Calculator</a>
+            <a href="#services" class="block py-2 text-slate-200 hover:text-emerald-400">Services & Solutions</a>
+            <a href="#about" class="block py-2 text-slate-200 hover:text-emerald-400">About PUERGY Power</a>
+            <a href="#contact" class="block py-2 text-slate-200 hover:text-emerald-400">Contact Us</a>
+            <a href="https://wa.me/917757842217" target="_blank" class="block w-full text-center bg-emerald-600 text-white py-2.5 rounded-xl font-semibold">
+                WhatsApp Us (+91 7757842217)
+            </a>
         </div>
     </header>
 
-    <main class="flex-grow">
-        <!-- Hero Section -->
-        <section id="home" class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-brand-dark via-brand-slate to-brand-dark">
-            <!-- Background Decorative Grid & Glow -->
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293d_1px,transparent_1px),linear-gradient(to_bottom,#1f293d_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-amber/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -z-10 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl"></div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-12 gap-12 items-center">
-                    <!-- Hero Content -->
-                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-amber/10 border border-brand-amber/30 text-brand-amber text-xs font-semibold uppercase tracking-wider">
-                            <i class="fa-solid fa-bolt text-brand-amber"></i> Tier-1 Solar Sourcing &amp; EPC Partner
-                        </div>
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                            Turnkey Solar EPC &amp; High-Efficiency <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber via-yellow-300 to-brand-green">Module &amp; BOS Sourcing</span>
-                        </h1>
-                        <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            End-to-end solar engineering, procurement, and construction. Global procurement for N-Type TOPCon/Mono PERC modules, string inverters, galvanized mounting structures, and high-spec Balance of System (BOS) components for Commercial, Industrial, &amp; Utility projects.
-                        </p>
-                        
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                            <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-amber to-amber-500 text-brand-dark font-bold shadow-lg hover:shadow-brand-amber/30 hover:-translate-y-0.5 transition-all text-center">
-                                <i class="fa-solid fa-calculator mr-2"></i> Calculate Solar ROI
-                            </a>
-                            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-slate border border-slate-700 hover:border-slate-500 text-white font-semibold transition-all text-center">
-                                Request B2B Quote
-                            </a>
-                        </div>
-
-                        <!-- Key Highlights Ticker -->
-                        <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left border-t border-slate-800/80">
-                            <div>
-                                <div class="text-2xl font-bold text-white">500+ MW</div>
-                                <div class="text-xs text-slate-400">Modules Supplied</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-brand-green">Tier 1</div>
-                                <div class="text-xs text-slate-400">Brand Portfolio</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-white">100%</div>
-                                <div class="text-xs text-slate-400">Quality Inspection</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-brand-amber">Turnkey</div>
-                                <div class="text-xs text-slate-400">EPC Execution</div>
-                            </div>
-                        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- HERO TEXT CONTENT -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        Trusted Solar Module & EPC Partner in Nagpur
                     </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        Powering A <span class="gradient-text">Sustainable</span> Future for Industry & Home
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        <strong class="text-white">PUERGY Power</strong> (PU ENERGY) delivers high-efficiency TOPCon & Mono-PERC PV solar modules, turnkey EPC consultancy, and tailored energy solutions across Nagpur and Central India.
+                    </p>
 
-                    <!-- Hero Visual / Stat Card -->
-                    <div class="lg:col-span-5">
-                        <div class="relative mx-auto max-w-md lg:max-w-none">
-                            <div class="relative bg-brand-card rounded-2xl border border-slate-700 p-6 shadow-2xl glow-effect space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-700/60 pb-4">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                    </div>
-                                    <span class="text-xs font-mono text-slate-400">LIVE SYSTEM PERFORMANCE</span>
+                    <!-- DIRECT CONTACT BADGE CARD -->
+                    <div class="glass-card p-5 rounded-2xl border-l-4 border-l-emerald-500 space-y-3 bg-slate-900/60">
+                        <div class="text-xs font-bold uppercase tracking-wider text-emerald-400">Direct Contact Details</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-user-circle text-lg"></i>
                                 </div>
-
-                                <div class="space-y-4">
-                                    <div class="bg-brand-dark/70 rounded-xl p-4 border border-slate-800 flex items-center justify-between">
-                                        <div>
-                                            <p class="text-xs text-slate-400 font-medium">Utility Project Supply</p>
-                                            <p class="text-lg font-bold text-white">580W TOPCon Modules</p>
-                                        </div>
-                                        <span class="px-2.5 py-1 bg-brand-green/20 text-brand-green border border-brand-green/30 text-xs rounded-full font-semibold">In Stock</span>
-                                    </div>
-
-                                    <div class="bg-brand-dark/70 rounded-xl p-4 border border-slate-800 flex items-center justify-between">
-                                        <div>
-                                            <p class="text-xs text-slate-400 font-medium">Commercial EPC Efficiency</p>
-                                            <p class="text-lg font-bold text-brand-amber">22.8% Module Efficiency</p>
-                                        </div>
-                                        <span class="px-2.5 py-1 bg-brand-amber/20 text-brand-amber border border-brand-amber/30 text-xs rounded-full font-semibold">Tier 1</span>
-                                    </div>
-
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="bg-brand-dark/50 p-3 rounded-lg border border-slate-800">
-                                            <span class="block text-xs text-slate-400">Inverter Efficiency</span>
-                                            <span class="text-base font-bold text-white">98.8% Max</span>
-                                        </div>
-                                        <div class="bg-brand-dark/50 p-3 rounded-lg border border-slate-800">
-                                            <span class="block text-xs text-slate-400">Warranty Coverage</span>
-                                            <span class="text-base font-bold text-white">30 Year Output</span>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <div class="text-slate-400 text-xs">Contact Person</div>
+                                    <div class="font-bold text-white">Shreya Agarwal</div>
                                 </div>
+                            </div>
 
-                                <div class="pt-2 text-center text-xs text-slate-400 flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-shield-halved text-brand-green"></i> ISO 9001 &amp; IEC Certified Sourcing Standards
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone-volume text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-slate-400 text-xs">Phone / Call</div>
+                                    <a href="tel:+917757842217" class="font-bold text-white hover:text-emerald-400">+91 7757842217</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-slate-400 text-xs">WhatsApp Chat</div>
+                                    <a href="https://wa.me/917757842217" target="_blank" class="font-bold text-emerald-400 hover:underline">Click to Chat Live</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-slate-400 text-xs">Email ID</div>
+                                    <a href="mailto:puergypower@gmail.com" class="font-bold text-white hover:text-amber-400">puergypower@gmail.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Core Business Divisions -->
-        <section id="services" class="py-20 bg-brand-dark relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <h2 class="text-xs font-bold text-brand-amber uppercase tracking-widest">Complete Solar Ecosystem</h2>
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Turnkey EPC &amp; High-Volume Sourcing</p>
-                    <p class="text-slate-400 text-base">We bridge the gap between world-class solar equipment manufacturers and industrial, commercial, and utility project developers.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Division 1 -->
-                    <div class="bg-brand-card rounded-2xl p-8 border border-slate-800 hover:border-brand-amber/50 transition-all group glow-card">
-                        <div class="w-14 h-14 rounded-xl bg-brand-amber/10 border border-brand-amber/30 flex items-center justify-center text-brand-amber text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-helmet-safety"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Turnkey Solar EPC Solutions</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            End-to-end engineering, procurement, construction, and grid connectivity services tailored for C&amp;I rooftops, ground-mount solar farms, and captive installations.
-                        </p>
-                        <ul class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> 3D LiDAR Site Survey &amp; Yield Simulation</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Civil, Structural &amp; Electrical Detailed Engineering</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Net Metering &amp; Statutory Approvals</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Testing, Commissioning &amp; O&amp;M Support</li>
-                        </ul>
-                    </div>
-
-                    <!-- Division 2 -->
-                    <div class="bg-brand-card rounded-2xl p-8 border border-slate-800 hover:border-brand-green/50 transition-all group glow-card">
-                        <div class="w-14 h-14 rounded-xl bg-brand-green/10 border border-brand-green/30 flex items-center justify-center text-brand-green text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-solar-panel"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Tier-1 Module Sourcing</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Direct OEM partnerships with Tier-1 solar module manufacturers delivering high-wattage, high-efficiency TOPCon, Mono PERC, and Bifacial PV modules.
-                        </p>
-                        <ul class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> N-Type TOPCon (570W - 710W+)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Bifacial Glass-Glass High Transmittance</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Factory Pre-dispatch Quality Inspection (EL/Flash test)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Customized Warranties &amp; Logistics Execution</li>
-                        </ul>
-                    </div>
-
-                    <!-- Division 3 -->
-                    <div class="bg-brand-card rounded-2xl p-8 border border-slate-800 hover:border-brand-cyan/50 transition-all group glow-card">
-                        <div class="w-14 h-14 rounded-xl bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-plug-circle-bolt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">BOS Component Distribution</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Complete Balance of System (BOS) supply chain solutions including central/string inverters, structural steel, DC solar cables, AJBs, and protection gear.
-                        </p>
-                        <ul class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> On-Grid &amp; Hybrid Inverters (5kW - 350kW)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Hot-Dip Galvanized &amp; Aluminum Structures</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> UV Resistant XLPO Solar DC Cables &amp; MC4</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-green"></i> Earthing, Lightning Protection &amp; SCADA</li>
-                        </ul>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#calculator" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2 shadow-lg shadow-blue-900/40">
+                            <i class="fa-solid fa-calculator"></i> Calculate Solar ROI
+                        </a>
+                        <a href="#contact" class="glass-panel hover:bg-slate-800 text-white px-6 py-3.5 rounded-xl font-bold text-sm transition flex items-center gap-2">
+                            <i class="fa-regular fa-paper-plane"></i> Get Free Quote
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Interactive Solar Calculator -->
-        <section id="calculator" class="py-20 bg-brand-slate/50 border-y border-slate-800 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Interactive Estimation Tool</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Solar ROI &amp; Capacity Calculator</h2>
-                    <p class="text-slate-400 text-sm">Estimate your recommended system size, generation, financial payback, and carbon offset in real-time.</p>
-                </div>
+                <!-- HERO GRAPHIC CARD -->
+                <div class="lg:col-span-5">
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700/50 shadow-2xl space-y-6 relative">
+                        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                            <h3 class="text-lg font-bold text-white">PUERGY Power Specs</h3>
+                            <span class="text-xs bg-emerald-500/20 text-emerald-300 font-semibold px-2.5 py-1 rounded-full">Tier-1 Quality</span>
+                        </div>
 
-                <div class="grid lg:grid-cols-12 gap-8 items-start">
-                    <!-- Calculator Inputs -->
-                    <div class="lg:col-span-7 bg-brand-card p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6">
-                        <!-- Consumer Category -->
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">1. Consumer Category</label>
-                            <div class="grid grid-cols-3 gap-3">
-                                <button type="button" onclick="setConsumerType('ci', 8.5)" id="btn-ci" class="consumer-btn px-4 py-3 rounded-xl border border-brand-amber bg-brand-amber/10 text-white font-medium text-xs sm:text-sm text-center flex flex-col items-center gap-1">
-                                    <i class="fa-solid fa-industry text-brand-amber text-lg"></i> C &amp; I Project
-                                </button>
-                                <button type="button" onclick="setConsumerType('res', 7.0)" id="btn-res" class="consumer-btn px-4 py-3 rounded-xl border border-slate-700 bg-brand-dark/50 text-slate-400 font-medium text-xs sm:text-sm text-center flex flex-col items-center gap-1 hover:border-slate-500">
-                                    <i class="fa-solid fa-house-solar text-lg"></i> Residential
-                                </button>
-                                <button type="button" onclick="setConsumerType('agri', 6.0)" id="btn-agri" class="consumer-btn px-4 py-3 rounded-xl border border-slate-700 bg-brand-dark/50 text-slate-400 font-medium text-xs sm:text-sm text-center flex flex-col items-center gap-1 hover:border-slate-500">
-                                    <i class="fa-solid fa-wheat-awn text-lg"></i> Agriculture
-                                </button>
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-solar-panel text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">N-Type TOPCon & Mono PERC</h4>
+                                    <p class="text-xs text-slate-400 mt-1">High conversion efficiency modules up to 22.5%+ for max yield in heat conditions.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-industry text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Commercial & Industrial EPC</h4>
+                                    <p class="text-xs text-slate-400 mt-1">End-to-end solar sourcing, procurement & turnkey execution based out of Nagpur.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-leaf text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Sustainable Energy Return</h4>
+                                    <p class="text-xs text-slate-400 mt-1">Substantial utility bill reductions and clean carbon offset tracking.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Monthly Electricity Bill -->
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">2. Average Monthly Power Bill</label>
-                                <span class="text-brand-amber font-bold text-lg" id="billDisplay">₹ 150,000 / mo</span>
+                        <!-- LOGO PREVIEW TOGGLE OPTION -->
+                        <div class="p-3 bg-slate-900/90 rounded-xl text-xs text-slate-400 border border-slate-800 space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span>Local Logo File Option</span>
+                                <label class="cursor-pointer text-emerald-400 underline hover:text-emerald-300">
+                                    Upload Image
+                                    <input type="file" id="logoUploader" accept="image/*" class="hidden">
+                                </label>
                             </div>
-                            <input type="range" id="billRange" min="10000" max="2000000" step="10000" value="150000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-amber" oninput="calculateSolar()">
-                            <div class="flex justify-between text-[11px] text-slate-500 mt-1">
-                                <span>₹ 10,000</span>
-                                <span>₹ 1,000,000</span>
-                                <span>₹ 2,000,000+</span>
-                            </div>
+                            <p class="text-[11px] text-slate-500">You can test replacing the header SVG with your local photo file anytime!</p>
                         </div>
-
-                        <!-- Available Area -->
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">3. Available Roof / Land Area</label>
-                                <span class="text-brand-green font-bold text-lg" id="areaDisplay">15,000 Sq.Ft</span>
-                            </div>
-                            <input type="range" id="areaRange" min="500" max="100000" step="500" value="15000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-green" oninput="calculateSolar()">
-                            <div class="flex justify-between text-[11px] text-slate-500 mt-1">
-                                <span>500 Sq.Ft</span>
-                                <span>50,000 Sq.Ft</span>
-                                <span>100,000 Sq.Ft</span>
-                            </div>
-                        </div>
-
-                        <div class="p-4 bg-brand-dark/60 rounded-xl border border-slate-800 text-xs text-slate-400 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-info text-brand-amber text-lg"></i>
-                            <span>Calculations assume high-efficiency 580W TOPCon PV modules (100 Sq.Ft approx per kWp) with solar irradiation index of 4.5 kWh/kWp/day.</span>
-                        </div>
-                    </div>
-
-                    <!-- Calculator Results Card -->
-                    <div class="lg:col-span-5 bg-gradient-to-b from-brand-card to-brand-slate p-6 sm:p-8 rounded-2xl border border-slate-700 shadow-xl space-y-6">
-                        <div class="border-b border-slate-700/80 pb-4 flex justify-between items-center">
-                            <h3 class="text-base font-bold text-white uppercase tracking-wider">Estimated System Yield</h3>
-                            <span class="px-2.5 py-1 bg-brand-green/10 text-brand-green border border-brand-green/30 text-xs rounded-md font-semibold">Tier-1 Optimized</span>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-brand-dark/80 p-4 rounded-xl border border-slate-800">
-                                <span class="block text-xs text-slate-400 mb-1">Recommended Size</span>
-                                <span class="text-2xl font-extrabold text-brand-amber" id="resCapacity">150 kWp</span>
-                            </div>
-                            <div class="bg-brand-dark/80 p-4 rounded-xl border border-slate-800">
-                                <span class="block text-xs text-slate-400 mb-1">Annual Generation</span>
-                                <span class="text-2xl font-extrabold text-white" id="resGeneration">219,000 kWh</span>
-                            </div>
-                        </div>
-
-                        <div class="space-y-3 bg-brand-dark/50 p-4 rounded-xl border border-slate-800/80 text-sm">
-                            <div class="flex justify-between items-center text-slate-300">
-                                <span class="text-xs">Est. Annual Financial Savings:</span>
-                                <span class="font-bold text-brand-green text-base" id="resSavings">₹ 1,861,500</span>
-                            </div>
-                            <div class="flex justify-between items-center text-slate-300">
-                                <span class="text-xs">Estimated System Payback:</span>
-                                <span class="font-bold text-white text-base" id="resPayback">3.2 Years</span>
-                            </div>
-                            <div class="flex justify-between items-center text-slate-300">
-                                <span class="text-xs">25-Year Cumulative Savings:</span>
-                                <span class="font-bold text-brand-amber text-base" id="res25YrSavings">₹ 4.65 Cr</span>
-                            </div>
-                            <div class="flex justify-between items-center text-slate-300 border-t border-slate-800 pt-3">
-                                <span class="text-xs text-slate-400"><i class="fa-solid fa-leaf text-brand-green mr-1"></i> CO2 Offset / Year:</span>
-                                <span class="font-bold text-slate-200 text-xs" id="resCO2">180 Metric Tons</span>
-                            </div>
-                        </div>
-
-                        <button onclick="requestCalcQuote()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-amber to-amber-500 text-brand-dark font-bold hover:shadow-lg transition-all text-sm flex items-center justify-center gap-2">
-                            <span>Lock-in Quotation for <span id="btnCapacityText">150 kWp</span></span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Digital Product Catalog -->
-        <section id="catalog" class="py-20 bg-brand-dark">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+    <!-- SOLAR ROI & CAPACITY CALCULATOR SECTION -->
+    <section id="calculator" class="py-16 bg-slate-950/70 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Interactive Solar Tool</span>
+                <h2 class="text-3xl font-extrabold text-white">Solar Capacity & ROI Savings Calculator</h2>
+                <p class="text-slate-400 text-sm">Estimate your required solar system capacity, monthly unit generation, financial savings, and payback period.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- INPUT FORM -->
+                <div class="lg:col-span-5 glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6">
+                    <h3 class="text-lg font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-emerald-400"></i> Project Parameters
+                    </h3>
+
                     <div>
-                        <span class="text-xs font-bold text-brand-amber uppercase tracking-widest">B2B Sourcing Portal</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Digital Product Catalog</h2>
-                        <p class="text-slate-400 text-sm mt-2">Certified Tier-1 Solar Modules, Inverters, Structures &amp; Cables for bulk supply.</p>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Monthly Electricity Bill (₹ INR)</label>
+                        <input type="number" id="calcBill" value="15000" min="1000" step="500" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
                     </div>
 
-                    <!-- Filter Tabs -->
-                    <div class="flex flex-wrap gap-2 bg-brand-card p-1.5 rounded-xl border border-slate-800 self-start md:self-auto">
-                        <button onclick="filterCatalog('all')" class="catalog-tab px-4 py-2 rounded-lg text-xs font-semibold bg-brand-amber text-brand-dark transition-all" data-cat="all">All Items</button>
-                        <button onclick="filterCatalog('modules')" class="catalog-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all" data-cat="modules">Modules</button>
-                        <button onclick="filterCatalog('inverters')" class="catalog-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all" data-cat="inverters">Inverters</button>
-                        <button onclick="filterCatalog('structures')" class="catalog-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all" data-cat="structures">Structures</button>
-                        <button onclick="filterCatalog('bos')" class="catalog-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all" data-cat="bos">BOS Electricals</button>
-                    </div>
-                </div>
-
-                <!-- Product Grid -->
-                <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Product 1 -->
-                    <div class="product-item bg-brand-card rounded-2xl border border-slate-800 p-5 flex flex-col justify-between hover:border-slate-600 transition-all" data-category="modules">
-                        <div class="space-y-4">
-                            <div class="h-40 bg-brand-dark/70 rounded-xl border border-slate-800/80 p-4 flex flex-col items-center justify-center relative overflow-hidden">
-                                <span class="absolute top-3 left-3 bg-brand-amber/20 text-brand-amber text-[10px] font-bold px-2 py-0.5 rounded border border-brand-amber/30">TOPCon</span>
-                                <i class="fa-solid fa-solar-panel text-5xl text-brand-amber/80 my-2"></i>
-                                <span class="text-[11px] text-slate-400">16BB Dual Glass</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Solar Module</span>
-                                <h3 class="text-base font-bold text-white mt-0.5">TOPCon 580W - 600W Bifacial</h3>
-                            </div>
-                            <div class="space-y-1.5 text-xs text-slate-300">
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Efficiency:</span>
-                                    <span class="font-semibold text-brand-green">Up to 22.8%</span>
-                                </div>
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Cell Type:</span>
-                                    <span>N-Type Monocrystalline</span>
-                                </div>
-                                <div class="flex justify-between text-[11px]">
-                                    <span class="text-slate-400">Degradation:</span>
-                                    <span>1st Year &lt;1.0%, Annual &lt;0.4%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="openRFQModal('TOPCon 580W-600W Bifacial Module')" class="mt-5 w-full py-2.5 rounded-lg bg-brand-slate hover:bg-brand-amber hover:text-brand-dark border border-slate-700 hover:border-brand-amber text-xs font-bold transition-all text-white">
-                            Inquire Pricing / Datasheet
-                        </button>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Available Rooftop / Land Area (sq. ft.)</label>
+                        <input type="number" id="calcArea" value="1200" min="100" step="50" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
                     </div>
 
-                    <!-- Product 2 -->
-                    <div class="product-item bg-brand-card rounded-2xl border border-slate-800 p-5 flex flex-col justify-between hover:border-slate-600 transition-all" data-category="inverters">
-                        <div class="space-y-4">
-                            <div class="h-40 bg-brand-dark/70 rounded-xl border border-slate-800/80 p-4 flex flex-col items-center justify-center relative overflow-hidden">
-                                <span class="absolute top-3 left-3 bg-brand-green/20 text-brand-green text-[10px] font-bold px-2 py-0.5 rounded border border-brand-green/30">C&amp;I Scale</span>
-                                <i class="fa-solid fa-box-archive text-5xl text-brand-green/80 my-2"></i>
-                                <span class="text-[11px] text-slate-400">10 MPPT Tracker</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Solar Inverter</span>
-                                <h3 class="text-base font-bold text-white mt-0.5">100kW - 125kW On-Grid Inverter</h3>
-                            </div>
-                            <div class="space-y-1.5 text-xs text-slate-300">
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Max Efficiency:</span>
-                                    <span class="font-semibold text-brand-green">98.8%</span>
-                                </div>
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Max DC Input:</span>
-                                    <span>1100V DC</span>
-                                </div>
-                                <div class="flex justify-between text-[11px]">
-                                    <span class="text-slate-400">Protection:</span>
-                                    <span>IP66 / Type II SPD</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="openRFQModal('100kW - 125kW String Inverter')" class="mt-5 w-full py-2.5 rounded-lg bg-brand-slate hover:bg-brand-amber hover:text-brand-dark border border-slate-700 hover:border-brand-amber text-xs font-bold transition-all text-white">
-                            Inquire Pricing / Datasheet
-                        </button>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Installation Type</label>
+                        <select id="calcType" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
+                            <option value="commercial">Commercial / Industrial (₹9.50/unit)</option>
+                            <option value="residential">Residential Rooftop (₹7.50/unit)</option>
+                            <option value="ground">Ground Mounted Plant (₹8.50/unit)</option>
+                        </select>
                     </div>
 
-                    <!-- Product 3 -->
-                    <div class="product-item bg-brand-card rounded-2xl border border-slate-800 p-5 flex flex-col justify-between hover:border-slate-600 transition-all" data-category="structures">
-                        <div class="space-y-4">
-                            <div class="h-40 bg-brand-dark/70 rounded-xl border border-slate-800/80 p-4 flex flex-col items-center justify-center relative overflow-hidden">
-                                <span class="absolute top-3 left-3 bg-brand-cyan/20 text-brand-cyan text-[10px] font-bold px-2 py-0.5 rounded border border-brand-cyan/30">HDG Steel</span>
-                                <i class="fa-solid fa-cubes text-5xl text-brand-cyan/80 my-2"></i>
-                                <span class="text-[11px] text-slate-400">80+ Micron Coating</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Mounting Structure</span>
-                                <h3 class="text-base font-bold text-white mt-0.5">Hot-Dip Galvanized Racking</h3>
-                            </div>
-                            <div class="space-y-1.5 text-xs text-slate-300">
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Wind Rating:</span>
-                                    <span class="font-semibold text-brand-green">Up to 180 km/h</span>
-                                </div>
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Tilt Angle:</span>
-                                    <span>10° to 35° Fixed/Seasonal</span>
-                                </div>
-                                <div class="flex justify-between text-[11px]">
-                                    <span class="text-slate-400">Design Life:</span>
-                                    <span>25+ Years Corrosion Proof</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="openRFQModal('Hot-Dip Galvanized Mounting Structure')" class="mt-5 w-full py-2.5 rounded-lg bg-brand-slate hover:bg-brand-amber hover:text-brand-dark border border-slate-700 hover:border-brand-amber text-xs font-bold transition-all text-white">
-                            Inquire Pricing / Datasheet
-                        </button>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="product-item bg-brand-card rounded-2xl border border-slate-800 p-5 flex flex-col justify-between hover:border-slate-600 transition-all" data-category="bos">
-                        <div class="space-y-4">
-                            <div class="h-40 bg-brand-dark/70 rounded-xl border border-slate-800/80 p-4 flex flex-col items-center justify-center relative overflow-hidden">
-                                <span class="absolute top-3 left-3 bg-yellow-500/20 text-yellow-500 text-[10px] font-bold px-2 py-0.5 rounded border border-yellow-500/30">1500V DC</span>
-                                <i class="fa-solid fa-wire-group text-5xl text-yellow-500/80 my-2"></i>
-                                <span class="text-[11px] text-slate-400">XLPO Insulated</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">BOS Electrical</span>
-                                <h3 class="text-base font-bold text-white mt-0.5">4sqmm / 6sqmm Solar DC Cable</h3>
-                            </div>
-                            <div class="space-y-1.5 text-xs text-slate-300">
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Conductor:</span>
-                                    <span class="font-semibold text-white">Tinned Annealed Copper</span>
-                                </div>
-                                <div class="flex justify-between text-[11px] border-b border-slate-800/80 pb-1">
-                                    <span class="text-slate-400">Temp Rating:</span>
-                                    <span>-40°C to +120°C</span>
-                                </div>
-                                <div class="flex justify-between text-[11px]">
-                                    <span class="text-slate-400">Standard:</span>
-                                    <span>EN 50618 / TUV Certified</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="openRFQModal('4sqmm / 6sqmm Solar DC Cable')" class="mt-5 w-full py-2.5 rounded-lg bg-brand-slate hover:bg-brand-amber hover:text-brand-dark border border-slate-700 hover:border-brand-amber text-xs font-bold transition-all text-white">
-                            Inquire Pricing / Datasheet
-                        </button>
+                    <div class="p-4 rounded-xl bg-blue-900/20 border border-blue-500/20 text-xs text-blue-300 space-y-1">
+                        <div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> Standard Benchmark:</div>
+                        <p>1 kWp solar system requires ~80-100 sq. ft. area and generates ~120-130 kWh (units) monthly in Central India / Nagpur.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Why Choose Us / Quality Audit -->
-        <section id="about" class="py-20 bg-brand-slate/40 border-t border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6">
-                        <span class="text-xs font-bold text-brand-amber uppercase tracking-widest">Rigorous Quality Framework</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">Zero-Defect Sourcing &amp; High-Yield Construction</h2>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            We eliminate risk in solar asset deployment. From factory floor EL testing to on-site flash test verification and civil structural audits, we ensure maximum yield for 25+ years.
-                        </p>
-
-                        <div class="space-y-4 pt-2">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-brand-amber/10 border border-brand-amber/30 flex-shrink-0 flex items-center justify-center text-brand-amber font-bold">
-                                    01
-                                </div>
-                                <div>
-                                    <h4 class="text-base font-bold text-white">Pre-Shipment Factory Audit</h4>
-                                    <p class="text-xs text-slate-400 mt-0.5">Third-party lab testing, electroluminescence (EL) crack scanning, and positive wattage tolerance check on all module consignments.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-brand-green/10 border border-brand-green/30 flex-shrink-0 flex items-center justify-center text-brand-green font-bold">
-                                    02
-                                </div>
-                                <div>
-                                    <h4 class="text-base font-bold text-white">Tier-1 Direct Supply Chain</h4>
-                                    <p class="text-xs text-slate-400 mt-0.5">Direct OEM contracts guarantee genuine manufacturer warranties and priority dispatch for large MW-scale orders.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex-shrink-0 flex items-center justify-center text-brand-cyan font-bold">
-                                    03
-                                </div>
-                                <div>
-                                    <h4 class="text-base font-bold text-white">Turnkey EPC Engineering Standards</h4>
-                                    <p class="text-xs text-slate-400 mt-0.5">Custom civil foundation engineering, thermal dissipation analysis, and SCADA-integrated remote monitoring setup.</p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- OUTPUT RESULTS -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-blue-500">
+                        <div class="text-xs font-bold text-slate-400 uppercase">Recommended System</div>
+                        <div id="resCapacity" class="text-3xl font-extrabold text-blue-400 mt-2">12 kWp</div>
+                        <p class="text-xs text-slate-400 mt-2">Optimal solar PV array size for your footprint</p>
                     </div>
 
-                    <!-- Quality Grid Graphic -->
-                    <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 space-y-6">
-                        <h3 class="text-lg font-bold text-white border-b border-slate-800 pb-4">Our Quality Checklist</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-4 bg-brand-dark/60 rounded-xl border border-slate-800">
-                                <i class="fa-solid fa-microscope text-brand-amber text-xl mb-2"></i>
-                                <h5 class="text-xs font-bold text-white">Double EL Testing</h5>
-                                <p class="text-[11px] text-slate-400 mt-1">Pre-lamination &amp; post-lamination micro-crack check.</p>
-                            </div>
-                            <div class="p-4 bg-brand-dark/60 rounded-xl border border-slate-800">
-                                <i class="fa-solid fa-shield-cat text-brand-green text-xl mb-2"></i>
-                                <h5 class="text-xs font-bold text-white">IP67/IP68 Protection</h5>
-                                <p class="text-[11px] text-slate-400 mt-1">Junction box and connector dust/water resistance.</p>
-                            </div>
-                            <div class="p-4 bg-brand-dark/60 rounded-xl border border-slate-800">
-                                <i class="fa-solid fa-wind text-brand-cyan text-xl mb-2"></i>
-                                <h5 class="text-xs font-bold text-white">Wind Load Simulation</h5>
-                                <p class="text-[11px] text-slate-400 mt-1">Tested for extreme cyclone &amp; high-gust conditions.</p>
-                            </div>
-                            <div class="p-4 bg-brand-dark/60 rounded-xl border border-slate-800">
-                                <i class="fa-solid fa-chart-line text-yellow-500 text-xl mb-2"></i>
-                                <h5 class="text-xs font-bold text-white">Flash Test Reports</h5>
-                                <p class="text-[11px] text-slate-400 mt-1">Individual barcode serial tracking per module.</p>
-                            </div>
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                        <div class="text-xs font-bold text-slate-400 uppercase">Est. Monthly Generation</div>
+                        <div id="resGeneration" class="text-3xl font-extrabold text-emerald-400 mt-2">1,500 Units</div>
+                        <p class="text-xs text-slate-400 mt-2">Clean solar electricity produced each month</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-amber-500">
+                        <div class="text-xs font-bold text-slate-400 uppercase">Est. Annual Savings</div>
+                        <div id="resSavings" class="text-3xl font-extrabold text-amber-400 mt-2">₹1,71,000</div>
+                        <p class="text-xs text-slate-400 mt-2">Direct reduction in grid power bills per year</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-green-500">
+                        <div class="text-xs font-bold text-slate-400 uppercase">Payback Horizon</div>
+                        <div id="resPayback" class="text-3xl font-extrabold text-green-400 mt-2">3.8 Years</div>
+                        <p class="text-xs text-slate-400 mt-2">Estimated capital payback duration</p>
+                    </div>
+
+                    <!-- Carbon offset highlight -->
+                    <div class="sm:col-span-2 glass-card p-6 rounded-2xl bg-gradient-to-r from-emerald-950/40 to-slate-900/80 flex items-center justify-between">
+                        <div>
+                            <div class="text-xs font-bold text-emerald-400 uppercase">Annual CO2 Reduction</div>
+                            <div id="resCO2" class="text-2xl font-bold text-white mt-1">18.0 Tons / Year</div>
+                            <p class="text-xs text-slate-400 mt-1">Equivalent to planting ~810 trees annually!</p>
+                        </div>
+                        <div class="text-4xl text-emerald-400/30">
+                            <i class="fa-solid fa-tree"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact & B2B Quote Request Form -->
-        <section id="contact" class="py-20 bg-brand-dark relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-12 gap-12">
-                    <!-- Contact Details -->
-                    <div class="lg:col-span-5 space-y-6">
-                        <span class="text-xs font-bold text-brand-amber uppercase tracking-widest">Get In Touch</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Request a B2B Quote or EPC Consultation</h2>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Looking to procure TOPCon modules, string inverters, or require turnkey EPC execution for your commercial solar project? Connect with our technical procurement team.
-                        </p>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Our Expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Sourcing & Turnkey EPC Solutions</h2>
+                <p class="text-slate-400 text-sm">Empowering installers, EPC contractors, and commercial entities with top-notch solar technology.</p>
+            </div>
 
-                        <div class="space-y-4 pt-4">
-                            <div class="flex items-center gap-4 p-4 bg-brand-card rounded-xl border border-slate-800">
-                                <div class="w-10 h-10 rounded-lg bg-brand-amber/10 flex items-center justify-center text-brand-amber text-lg">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block">Email Us</span>
-                                    <span class="text-sm font-semibold text-white">procurement@solaratech-epc.com</span>
-                                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SERVICE CARD 1 -->
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-solar-panel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">TOPCon PV Modules</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">High efficiency N-type TOPCon solar modules featuring minimal LID degradation, higher bifaciality, and reliable performance under high temperatures.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Module Efficiencies up to 22.5%+</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> High power output per sq. meter</li>
+                    </ul>
+                </div>
+
+                <!-- SERVICE CARD 2 -->
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Commercial & Industrial EPC</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Turnkey solar plant design, procurement, and supply management tailored for manufacturing units, warehouses, and commercial complexes.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Customized System Engineering</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Optimal ROI & payback modeling</li>
+                    </ul>
+                </div>
+
+                <!-- SERVICE CARD 3 -->
+                <div class="glass-card p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Quality Inspection & Audits</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Strict quality assurance protocols including EL testing, micro-crack prevention, cell stringer verification, and factory audit supervision.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Electroluminescence (EL) standard check</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Zero cell-crack shipment guarantee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-slate-950/80 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">About PUERGY Power</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Delivering Solar Energy Excellence from Nagpur</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Headquartered in <strong class="text-white">Nagpur, Maharashtra</strong>, <strong>PUERGY Power</strong> (PU ENERGY) stands at the forefront of clean energy distribution. We bridge tier-1 solar photovoltaic manufacturers with local EPC contractors, industrial power consumers, and rooftop solar developers.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Under the leadership of key executives including <strong class="text-emerald-400">Shreya Agarwal</strong>, our mission is to accelerate solar adoption through uncompromised module quality, fast turnaround times, and dependable technical support.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-2xl font-black text-blue-400">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Tested Tier-1 Quality</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-2xl font-black text-emerald-400">Nagpur</div>
+                            <div class="text-xs text-slate-400 mt-1">Strategic Hub Central India</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPANY BRANDING HIGHLIGHT BOX -->
+                <div class="lg:col-span-6">
+                    <div class="glass-panel p-8 rounded-3xl border border-slate-700/60 text-center space-y-6">
+                        <div class="p-4 bg-white rounded-2xl shadow-xl max-w-xs mx-auto">
+                            <!-- PU ENERGY BRAND LOGO -->
+                            <svg viewBox="0 0 500 200" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="500" height="200" fill="#ffffff" rx="10"/>
+                                <g fill="#f59e0b">
+                                    <polygon points="340,30 350,10 360,30"/>
+                                    <polygon points="370,40 390,25 380,50"/>
+                                    <polygon points="390,65 415,60 395,80"/>
+                                    <polygon points="395,95 420,100 395,110"/>
+                                    <polygon points="310,35 315,12 330,32"/>
+                                    <polygon points="280,50 280,25 298,48"/>
+                                </g>
+                                <circle cx="330" cy="80" r="45" fill="url(#sunGrad2)"/>
+                                <path d="M150,30 L220,30 C250,30 260,50 260,70 C260,95 240,110 210,110 L190,110 L190,150 L150,150 Z M190,60 L190,80 L210,80 C220,80 225,75 225,70 C225,65 220,60 210,60 Z" fill="url(#blueGrad2)"/>
+                                <path d="M225,50 L260,50 L260,110 C260,135 280,150 305,150 C330,150 350,135 350,110 L350,50 L385,50 L385,110 C385,155 350,180 305,180 C260,180 225,155 225,110 Z" fill="url(#greenGrad2)"/>
+                                <path d="M120,155 C190,110 280,50 365,60 C320,75 250,130 180,150 Z" fill="#22c55e"/>
+                                <path d="M280,85 C310,70 340,62 365,60 C330,85 290,105 280,85 Z" fill="#15803d"/>
+                                <text x="80" y="145" font-family="'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#005baa">PU</text>
+                                <text x="175" y="145" font-family="'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#15803d">ENERGY</text>
+                                <text x="82" y="172" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="16" fill="#334155" letter-spacing="2.2">POWERING A SUSTAINABLE FUTURE</text>
+                                <defs>
+                                    <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#0284c7"/>
+                                        <stop offset="100%" stop-color="#003b73"/>
+                                    </linearGradient>
+                                    <linearGradient id="greenGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#22c55e"/>
+                                        <stop offset="100%" stop-color="#14532d"/>
+                                    </linearGradient>
+                                    <linearGradient id="sunGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#fde047"/>
+                                        <stop offset="100%" stop-color="#f59e0b"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">PUERGY Power</h3>
+                            <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase mt-1">Powering A Sustainable Future</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- CONTACT DETAILS CARD -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Get In Touch</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-1">Contact PUERGY Power</h2>
+                        <p class="text-slate-400 text-sm mt-2">Reach out directly for module pricing, EPC inquiries, or technical solar consultations.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-user-circle"></i>
                             </div>
-
-                            <div class="flex items-center gap-4 p-4 bg-brand-card rounded-xl border border-slate-800">
-                                <div class="w-10 h-10 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-green text-lg">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block">Call / WhatsApp Desk</span>
-                                    <span class="text-sm font-semibold text-white">+91 (0) 800-555-SOLAR</span>
-                                </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Contact Person</div>
+                                <div class="text-base font-bold text-white">Shreya Agarwal</div>
                             </div>
+                        </div>
 
-                            <div class="flex items-center gap-4 p-4 bg-brand-card rounded-xl border border-slate-800">
-                                <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 flex items-center justify-center text-brand-cyan text-lg">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block">Corporate Office</span>
-                                    <span class="text-sm font-semibold text-white">Solar Tech Park, Sector 62, Green Energy Corridor</span>
-                                </div>
+                        <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Phone Number</div>
+                                <a href="tel:+917757842217" class="text-base font-bold text-white hover:text-emerald-400">+91 7757842217</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Email Address</div>
+                                <a href="mailto:puergypower@gmail.com" class="text-base font-bold text-white hover:text-amber-400">puergypower@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Location</div>
+                                <div class="text-base font-bold text-white">Nagpur, Maharashtra, India</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- RFQ Form -->
-                    <div class="lg:col-span-7 bg-brand-card p-8 rounded-2xl border border-slate-800 shadow-2xl">
-                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                            <i class="fa-solid fa-paper-plane text-brand-amber"></i> Fast Track Project Inquiry Form
-                        </h3>
+                    <!-- DIRECT WHATSAPP BUTTON -->
+                    <a href="https://wa.me/917757842217?text=Hi%20Shreya,%20I%20would%20like%20to%20get%20more%20info%20about%20PUERGY%20Power%20Solar%20Modules." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-3 transition shadow-lg shadow-emerald-900/40">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Chat Directly on WhatsApp
+                    </a>
+                </div>
 
-                        <form id="rfqForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                            <div class="grid sm:grid-cols-2 gap-4">
+                <!-- INQUIRY FORM -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6">
+                        <h3 class="text-xl font-bold text-white border-b border-slate-800 pb-4">Send Solar Inquiry</h3>
+
+                        <form id="inquiryForm" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1">Full Name *</label>
-                                    <input type="text" id="contactName" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber">
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                                    <input type="text" id="inqName" required placeholder="e.g. Rahul Sharma" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1">Company / Organization *</label>
-                                    <input type="text" id="contactCompany" required placeholder="Solar Power Corp" class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber">
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Contact Phone *</label>
+                                    <input type="tel" id="inqPhone" required placeholder="+91 9876543210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
                                 </div>
                             </div>
 
-                            <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1">Work Email *</label>
-                                    <input type="email" id="contactEmail" required placeholder="john@company.com" class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber">
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+                                    <input type="email" id="inqEmail" placeholder="name@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1">Phone Number *</label>
-                                    <input type="tel" id="contactPhone" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber">
-                                </div>
-                            </div>
-
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1">Requirement Scope</label>
-                                    <select id="contactScope" class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber">
-                                        <option value="Turnkey EPC Project">Turnkey EPC Execution</option>
-                                        <option value="Solar Module Sourcing Only">Solar Module Sourcing Only</option>
-                                        <option value="Inverters & BOS Components">Inverters &amp; BOS Components</option>
-                                        <option value="Complete Supply & Build">Complete Supply &amp; Build Combo</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1">Estimated System Size</label>
-                                    <select id="contactCapacity" class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber">
-                                        <option value="100kW - 500kW">100 kWp - 500 kWp</option>
-                                        <option value="500kW - 1MW">500 kWp - 1 MWp</option>
-                                        <option value="1MW - 5MW">1 MWp - 5 MWp</option>
-                                        <option value="5MW+ Utility">5 MWp+ Utility Scale</option>
-                                    </select>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">City / Location</label>
+                                    <input type="text" id="inqLocation" value="Nagpur" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1">Project Details / Component Specifications</label>
-                                <textarea id="contactMessage" rows="3" placeholder="Specify module wattage, preferred inverter brand, delivery timeline, or site location..." class="w-full px-4 py-2.5 rounded-lg bg-brand-dark border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-amber"></textarea>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Requirement Type</label>
+                                <select id="inqRequirement" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500">
+                                    <option value="Solar Module Bulk Purchase">Solar Module Bulk Sourcing (TOPCon / PERC)</option>
+                                    <option value="Turnkey EPC Project">Turnkey Commercial EPC Project</option>
+                                    <option value="Residential Solar Setup">Rooftop Solar Installation</option>
+                                    <option value="General Consultation">General Solar Inquiry</option>
+                                </select>
                             </div>
 
-                            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-amber to-amber-500 text-brand-dark font-bold hover:shadow-lg hover:shadow-amber-500/20 transition-all text-sm">
-                                Submit Request for Quotation
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Message / Project Details</label>
+                                <textarea id="inqMessage" rows="3" placeholder="Tell us about your roof area or capacity requirements..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-blue-900/40 flex items-center justify-center gap-2">
+                                <i class="fa-regular fa-paper-plane"></i> Submit Request
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <!-- Submission Modal -->
-    <div id="quoteModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-brand-card rounded-2xl border border-slate-700 max-w-md w-full p-6 space-y-5 text-center relative animate-fade-in">
-            <div class="w-16 h-16 bg-brand-green/20 text-brand-green rounded-full flex items-center justify-center mx-auto text-3xl border border-brand-green/30">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold text-white">Quote Request Received!</h3>
-                <p class="text-xs text-slate-400 mt-1">Our technical procurement manager will reach out within 2 business hours with pricing datasheets.</p>
-            </div>
-
-            <div id="modalSummary" class="bg-brand-dark p-4 rounded-xl text-left border border-slate-800 text-xs space-y-2 text-slate-300">
-                <!-- Dynamic Modal Content -->
-            </div>
-
-            <button onclick="closeModal()" class="w-full py-2.5 rounded-xl bg-brand-amber text-brand-dark font-bold text-xs hover:bg-amber-400 transition-all">
-                Close &amp; Back to Website
-            </button>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-brand-dark border-t border-slate-800 py-12">
+    <!-- LOGO REPLACEMENT GUIDE FOR CLIENT -->
+    <section class="py-12 bg-slate-950 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-                <div class="col-span-2 md:col-span-1 space-y-3">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-7 h-7 rounded bg-brand-amber flex items-center justify-center text-brand-dark font-black text-sm">
-                            <i class="fa-solid fa-solar-panel"></i>
-                        </div>
-                        <span class="text-base font-extrabold text-white">SOLARATECH</span>
-                    </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Premier EPC and Tier-1 procurement partner for solar module, inverter, and BOS component distribution across industrial and commercial segments.
-                    </p>
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-3">
+                <div class="flex items-center gap-2 font-bold text-amber-400 text-sm">
+                    <i class="fa-solid fa-code"></i> How to Replace the Embedded Logo Image File
                 </div>
-
-                <div>
-                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Core Solutions</h4>
-                    <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="#services" class="hover:text-brand-amber transition-colors">C&amp;I Solar EPC</a></li>
-                        <li><a href="#services" class="hover:text-brand-amber transition-colors">TOPCon Module Supply</a></li>
-                        <li><a href="#services" class="hover:text-brand-amber transition-colors">String &amp; Central Inverters</a></li>
-                        <li><a href="#services" class="hover:text-brand-amber transition-colors">Ground Mount Structures</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Calculators &amp; Tools</h4>
-                    <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="#calculator" class="hover:text-brand-amber transition-colors">Solar ROI Estimator</a></li>
-                        <li><a href="#catalog" class="hover:text-brand-amber transition-colors">BOS Product Catalog</a></li>
-                        <li><a href="#about" class="hover:text-brand-amber transition-colors">Quality Inspection Guide</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Compliance &amp; Certs</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-brand-slate text-[10px] text-slate-300 rounded border border-slate-700">IEC 61215</span>
-                        <span class="px-2 py-1 bg-brand-slate text-[10px] text-slate-300 rounded border border-slate-700">ISO 9001</span>
-                        <span class="px-2 py-1 bg-brand-slate text-[10px] text-slate-300 rounded border border-slate-700">CE Certified</span>
-                        <span class="px-2 py-1 bg-brand-slate text-[10px] text-slate-300 rounded border border-slate-700">TUV Rheinland</span>
-                    </div>
+                <p>If you want to use an actual local file like <code class="bg-slate-900 px-1.5 py-0.5 rounded text-emerald-400">logo.png</code> or your WhatsApp image file instead of the inline vector SVG logo, simply locate the <code class="bg-slate-900 px-1.5 py-0.5 rounded text-emerald-400">&lt;div class="logo-container"&gt;</code> in this file and replace the <code class="bg-slate-900 px-1.5 py-0.5 rounded text-emerald-400">&lt;svg&gt;...&lt;/svg&gt;</code> block with:</p>
+                <div class="p-3 bg-slate-900 rounded-xl text-slate-200 font-mono overflow-x-auto">
+                    &lt;img src="WhatsApp Image 2026-10-07 at 10.41.30 PM_2.jpeg" alt="PUERGY Power Logo" class="h-12 w-auto object-contain"&gt;
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>&copy; 2026 SolaraTech EPC &amp; Sourcing Solutions. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-slate-300">Privacy Policy</a>
-                    <a href="#" class="hover:text-slate-300">Terms of Supply</a>
-                    <a href="#" class="hover:text-slate-300">Warranty Registration</a>
-                </div>
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 text-slate-400 text-xs py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <div class="font-bold text-white text-base">PUERGY Power</div>
+                <div class="text-slate-500 mt-0.5">POWERING A SUSTAINABLE FUTURE</div>
+            </div>
+            <div class="text-slate-500">
+                &copy; <span id="year"></span> PUERGY Power. Contact: Shreya Agarwal (+91 7757842217) | Nagpur.
             </div>
         </div>
     </footer>
 
-    <script>
-        // Global variables for ROI Calculator
-        let currentTariff = 8.5; // Default C&I rate per kWh
+    <!-- SUCCESS MODAL -->
+    <div id="successModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden z-50 flex items-center justify-center p-4">
+        <div class="glass-panel p-8 rounded-3xl max-w-md w-full border border-emerald-500/30 text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Inquiry Received!</h3>
+            <p class="text-sm text-slate-300">Thank you for contacting PUERGY Power. Shreya Agarwal will get back to you shortly.</p>
+            <button id="closeModal" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl">
+                Close
+            </button>
+        </div>
+    </div>
 
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
+    <script>
+        // Set dynamic current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Nav Toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Set Consumer Type in Calculator
-        function setConsumerType(type, tariff) {
-            currentTariff = tariff;
-            
-            // Toggle active classes on buttons
-            document.querySelectorAll('.consumer-btn').forEach(btn => {
-                btn.classList.remove('border-brand-amber', 'bg-brand-amber/10', 'text-white');
-                btn.classList.add('border-slate-700', 'bg-brand-dark/50', 'text-slate-400');
-            });
+        // SOLAR CALCULATOR LOGIC
+        const calcBill = document.getElementById('calcBill');
+        const calcArea = document.getElementById('calcArea');
+        const calcType = document.getElementById('calcType');
 
-            const activeBtn = document.getElementById(`btn-${type}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('border-slate-700', 'bg-brand-dark/50', 'text-slate-400');
-                activeBtn.classList.add('border-brand-amber', 'bg-brand-amber/10', 'text-white');
-            }
+        const resCapacity = document.getElementById('resCapacity');
+        const resGeneration = document.getElementById('resGeneration');
+        const resSavings = document.getElementById('resSavings');
+        const resPayback = document.getElementById('resPayback');
+        const resCO2 = document.getElementById('resCO2');
 
-            calculateSolar();
-        }
-
-        // Live Solar ROI Calculation
         function calculateSolar() {
-            const bill = parseFloat(document.getElementById('billRange').value);
-            const area = parseFloat(document.getElementById('areaRange').value);
+            const bill = parseFloat(calcBill.value) || 0;
+            const area = parseFloat(calcArea.value) || 0;
+            const type = calcType.value;
 
-            // Update UI Labels
-            document.getElementById('billDisplay').textContent = `₹ ${bill.toLocaleString('en-IN')} / mo`;
-            document.getElementById('areaDisplay').textContent = `${area.toLocaleString('en-IN')} Sq.Ft`;
+            // Tariff estimation per kWh
+            let tariff = 9.5;
+            if(type === 'residential') tariff = 7.5;
+            if(type === 'ground') tariff = 8.5;
 
-            // Calculate capacity based on bill & area constraints
-            // 1 kW requires ~100 sq.ft
-            const maxCapacityByArea = area / 100;
-            // Est monthly generation per kWp = 120 kWh
-            const requiredCapacityByBill = (bill / currentTariff) / 120;
-
-            // System size is capped by area, rounded to nearest 5 kW
-            let recommendedCapacity = Math.min(requiredCapacityByBill, maxCapacityByArea);
-            recommendedCapacity = Math.max(5, Math.round(recommendedCapacity / 5) * 5);
-
-            // Calculations
-            const annualGenKwh = Math.round(recommendedCapacity * 1460); // 4 kWh per kWp per day
-            const annualSavings = Math.round(annualGenKwh * currentTariff);
+            // Est Monthly consumption units
+            const monthlyUnits = bill / tariff;
             
-            // Estimated Turnkey Cost (approx ₹42,000 / kWp C&I commercial grade)
-            const estimatedCapEx = recommendedCapacity * 42000;
-            const paybackYears = (estimatedCapEx / annualSavings).toFixed(1);
-            const cumulative25YrSavings = (annualSavings * 25) / 10000000; // in Crores
+            // Required capacity based on monthly units (~125 units per kWp per month)
+            let capacityFromBill = monthlyUnits / 125;
+            // Max capacity from available roof area (~90 sq. ft. per kWp)
+            let capacityFromArea = area / 90;
 
-            // CO2 offset: 0.82 kg per kWh
-            const co2OffsetTons = Math.round((annualGenKwh * 0.82) / 1000);
+            let recommendedCap = Math.min(capacityFromBill, capacityFromArea);
+            if (recommendedCap < 1) recommendedCap = 1;
 
-            // Update Results Cards
-            document.getElementById('resCapacity').textContent = `${recommendedCapacity.toLocaleString('en-IN')} kWp`;
-            document.getElementById('btnCapacityText').textContent = `${recommendedCapacity.toLocaleString('en-IN')} kWp`;
-            document.getElementById('resGeneration').textContent = `${annualGenKwh.toLocaleString('en-IN')} kWh`;
-            document.getElementById('resSavings').textContent = `₹ ${annualSavings.toLocaleString('en-IN')}`;
-            document.getElementById('resPayback').textContent = `${paybackYears} Years`;
-            document.getElementById('res25YrSavings').textContent = `₹ ${cumulative25YrSavings.toFixed(2)} Cr`;
-            document.getElementById('resCO2').textContent = `${co2OffsetTons} Metric Tons`;
+            const estMonthlyGen = Math.round(recommendedCap * 125);
+            const estAnnualSavings = Math.round(estMonthlyGen * 12 * tariff);
+            
+            // Est installation cost ~₹45,000 per kWp benchmark
+            const estCost = recommendedCap * 45000;
+            const paybackYears = (estCost / estAnnualSavings).toFixed(1);
+
+            // CO2 reduction (~0.85 kg per kWh)
+            const annualCO2Tons = ((estMonthlyGen * 12 * 0.85) / 1000).toFixed(1);
+
+            resCapacity.textContent = `${recommendedCap.toFixed(1)} kWp`;
+            resGeneration.textContent = `${estMonthlyGen.toLocaleString()} Units`;
+            resSavings.textContent = `₹${estAnnualSavings.toLocaleString()}`;
+            resPayback.textContent = `${paybackYears > 0 ? paybackYears : 3.5} Years`;
+            resCO2.textContent = `${annualCO2Tons} Tons / Year`;
         }
 
-        // Product Catalog Filter
-        function filterCatalog(category) {
-            // Highlight Tab
-            document.querySelectorAll('.catalog-tab').forEach(tab => {
-                if (tab.getAttribute('data-cat') === category) {
-                    tab.classList.remove('text-slate-400');
-                    tab.classList.add('bg-brand-amber', 'text-brand-dark');
-                } else {
-                    tab.classList.remove('bg-brand-amber', 'text-brand-dark');
-                    tab.classList.add('text-slate-400');
-                }
-            });
+        calcBill.addEventListener('input', calculateSolar);
+        calcArea.addEventListener('input', calculateSolar);
+        calcType.addEventListener('change', calculateSolar);
+        // Initial run
+        calculateSolar();
 
-            // Filter Product Items
-            document.querySelectorAll('.product-item').forEach(item => {
-                if (category === 'all' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
+        // LOCAL LOGO UPLOADER HANDLER
+        const logoUploader = document.getElementById('logoUploader');
+        logoUploader.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const containers = document.querySelectorAll('.logo-container');
+                    containers.forEach(container => {
+                        container.innerHTML = `<img src="${evt.target.result}" alt="PUERGY Power Logo" class="h-10 sm:h-12 w-auto object-contain max-w-full">`;
+                    });
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
-        // Handle Quick Action from Calculator
-        function requestCalcQuote() {
-            const cap = document.getElementById('resCapacity').textContent;
-            document.getElementById('contactMessage').value = `Interested in locking in a turnkey EPC quote for an estimated system capacity of ${cap}.`;
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }
+        // FORM SUBMISSION HANDLER
+        const inquiryForm = document.getElementById('inquiryForm');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
 
-        // Open RFQ Modal directly for products
-        function openRFQModal(productName) {
-            document.getElementById('contactMessage').value = `Inquiry regarding bulk pricing, lead times, and datasheets for: ${productName}.`;
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Handle Contact Form Submission
-        function handleFormSubmit(e) {
+        inquiryForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = document.getElementById('contactName').value;
-            const company = document.getElementById('contactCompany').value;
-            const scope = document.getElementById('contactScope').value;
-            const capacity = document.getElementById('contactCapacity').value;
+            const name = document.getElementById('inqName').value;
+            const phone = document.getElementById('inqPhone').value;
+            const req = document.getElementById('inqRequirement').value;
+            const msg = document.getElementById('inqMessage').value;
 
-            document.getElementById('modalSummary').innerHTML = `
-                <div><strong class="text-white">Client:</strong> ${name} (${company})</div>
-                <div><strong class="text-white">Requirement:</strong> ${scope}</div>
-                <div><strong class="text-white">Capacity Target:</strong> ${capacity}</div>
-                <div><strong class="text-white">Reference ID:</strong> RFQ-${Math.floor(100000 + Math.random() * 900000)}</div>
-            `;
+            // Direct WhatsApp construct option
+            const waMsg = `*New Solar Inquiry*%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Requirement:* ${encodeURIComponent(req)}%0A*Message:* ${encodeURIComponent(msg)}`;
+            
+            // Show modal feedback
+            successModal.classList.remove('hidden');
 
-            document.getElementById('quoteModal').classList.remove('hidden');
-            document.getElementById('rfqForm').reset();
-        }
+            // Option to trigger WhatsApp window after submit
+            setTimeout(() => {
+                window.open(`https://wa.me/917757842217?text=${waMsg}`, '_blank');
+            }, 1200);
+        });
 
-        function closeModal() {
-            document.getElementById('quoteModal').classList.add('hidden');
-        }
-
-        // Initial trigger on window load
-        window.onload = function() {
-            calculateSolar();
-        };
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            inquiryForm.reset();
+        });
     </script>
 </body>
 </html>
