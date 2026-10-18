@@ -53,7 +53,7 @@
         <h2>Have a solar requirement?</h2>
         <p>Whether you need solar modules, a rooftop installation, a C&I project solution or a distribution partnership, connect with PUERGY to discuss your requirements.</p>
       </div>
-      <form class="inquiry-form" id="inquiryForm" action="https://formspree.io/f/info@puergypower.com" method="POST" onsubmit="handleFormSubmit(event)">
+      <form class="inquiry-form" id="inquiryForm" action="https://formspree.io/f/xyekvnjq" method="POST">
         <input type="text" id="name" name="Name" placeholder="Your Full Name" required />
         <input type="tel" id="phone" name="Phone" placeholder="Phone / WhatsApp Number" required />
         <input type="email" id="email" name="Email" placeholder="Email Address" required />
@@ -80,12 +80,16 @@
 <footer class="footer"><div class="wrap"><div class="footergrid"><div><div class="logo"><img src="logo.png" alt="PUERGY Power" style="display:block;width:min(220px,80vw);height:auto;"></div><p>Solar products, distribution and EPC solutions for residential, commercial, industrial and agricultural applications.</p></div><div><strong style="color:#fff">Get in touch</strong><p>Contact Person: Shreya Agarwal<br>Phone: <a href="tel:+917757842217">+91 7757842217</a><br>Email: <a href="mailto:info@puergypower.com">info@puergypower.com</a><br>Website: <a href="https://www.puergypower.com" target="_blank" rel="noopener">www.puergypower.com</a><br>Office: [Add registered / business address]</p></div></div><div class="disclaimer">PUERGY's services, product availability, manufacturer relationships and project participation are subject to actual supply arrangements, applicable registrations, tender conditions, scheme eligibility and written authorisations. Do not describe PUERGY as an authorised dealer or approved vendor unless formally authorised.</div><div class="footnote"><span>© <span id="year">2026</span> PUERGY. All rights reserved.</span><span>www.puergypower.com &nbsp; | &nbsp; info@puergypower.com</span></div></div></footer>
 
 <script>
-function handleFormSubmit(e) {
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const email = document.getElementById("email").value;
-  const requirement = document.getElementById("requirement").value;
-  const message = document.getElementById("message").value;
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  const subject = encodeURIComponent(`New Solar Inquiry from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nRe
+function sendWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const requirement = document.getElementById("requirement").value;
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !phone) {
+    alert("Please enter your Name and Phone / WhatsApp Number first.");
+    return;
+    
