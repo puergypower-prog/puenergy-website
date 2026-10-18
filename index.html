@@ -92,4 +92,15 @@ function sendWhatsApp() {
   if (!name || !phone) {
     alert("Please enter your Name and Phone / WhatsApp Number first.");
     return;
-    
+  }
+
+  const formattedText = `Hello PUERGY Team,\n\nI have a solar requirement:\n• Name: ${name}\n• Phone: ${phone}\n• Email: ${email || 'N/A'}\n• Requirement: ${requirement || 'N/A'}\n• Message: ${message || 'N/A'}`;
+
+  const encodedText = encodeURIComponent(formattedText);
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=917757842217&text=${encodedText}`;
+  
+  window.open(whatsappUrl, '_blank');
+}
+</script>
+</body>
+</html>
